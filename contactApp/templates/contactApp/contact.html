@@ -1,0 +1,22 @@
+{% extends "devcoApp/base.html"%}
+
+{% load static %}
+
+{% block content %}
+ <div class="formContainer">
+
+    {% if "send" in request.GET %}
+        <p style="text-align:center; color:rgb(118, 193, 67)">
+            Requerimiento enviado
+        </p>
+    {% endif %}
+
+    <form action="" method="POST" style="text-align: center;">
+        {% csrf_token %}
+        <table style="color: #fff; margin: 20px auto ;"> {{requestForm.as_table}}</table>
+        <input type="submit" value="Enviar" style="width: 150px;">
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "devcoApp/base.html"%}
+
+{% load static %}
+
+{% block content %}
+<div class="formContainerTwo">
+    <form action="" method="POST" style="text-align: center;">
+        {% csrf_token %}
+        <table style="color: #fff; margin: 20px auto ;">{{myAssingForm.as_table}}</table>
+        <input type="submit" value="Asignar" style="width: 150px;">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{
+    "Post": {
+      "name": {
+        "string": [
+          "epson",
+          "xiaomi",
+          "asus",
+          "mac",
+          "hp"
+        ]
+      },
+      "type": {
+        "string": [
+          "laptop",
+          "celular",
+          "impresora",
+          "mouse",
+          "Teclado"
+        ]
+      }
+    }
+  }
