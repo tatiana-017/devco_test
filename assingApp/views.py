@@ -30,7 +30,7 @@ def assing(request):
             return redirect("/assing/?invalid")
 
         if assing_form.is_valid():
-            #assing_form.save()
+            assing_form.save()
             return redirect("/assing/?valid")
         return render(request, "assingApp/assing.html", {'myAssingForm':assing_form})
     return render(request, "assingApp/assing.html", {'myAssingForm':assing_form})
