@@ -4,6 +4,17 @@
 
 {% block content %}
 <div class="formContainerTwo">
+    {% if "invalid" in request.GET %}
+        <p style="text-align:center; color:rgb(118, 193, 67)">
+            EQUIPO NO DISPONIBLE
+        </p>
+    {% endif %}
+    {% if "valid" in request.GET %}
+        <p style="text-align:center; color:rgb(118, 193, 67)">
+            EQUIPO ASIGNADO CORRECTAMENTE
+        </p>
+    {% endif %}
+
     <form action="" method="POST" style="text-align: center;">
         {% csrf_token %}
         <table style="color: #fff; margin: 20px auto ;">{{myAssingForm.as_table}}</table>
